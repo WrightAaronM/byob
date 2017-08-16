@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Social BYOB</title>
+</head>
+<body>
+  <h1>Share this page</h1>
+  <p><strong>NOTE:</strong> If you open this page as a file, these buttons won't work as expected. For best results, open them using localhost. Also, some of them try to fetch the page being shared, so if the page is not web-accessible the share window might not function as normal. As long as the share window opens, it should work in production.</p>
+
+  <button class='share-twitter'>Tweet this</button>
+  <button class='share-facebook'>Share on Facebook</button>
+  <button class='share-google'>Google +</button>
+  <button class='share-linkedin'>Share on LinkedIn</button>
+  <button class='share-reddit'>Share on Reddit</button>
+  <button class='share-evernote'>Add to Evernote</button>
+
+  <script>
+  var shareSettings = {
+    twitter: {
+      class: 'share-twitter',
+      text: 'This is what gets pre-filled into the tweet',
+      url: window.location.href,
+      via: 'YourTwitterUsername' // Do not add the @ sign
+    },
+    facebook: {
+      class: 'share-facebook',
+      url: window.location.href
+    },
+    googlePlus: {
+      class: 'share-google-plus',
+      url: window.location.href
+    },
+    linkedIn: {
+      class: 'share-linkedin',
+      url: window.location.href,
+      title: 'Title your post',
+      domain: window.location.hostname
+    },
+    reddit: {
+      class: 'share-reddit',
+      url: window.location.hostname,
+      title: 'Reddit title goes here'
+    },
+    evernote: {
+      class: 'share-evernote',
+      url: window.location.hostname,
+      title: 'Evernote note title'
+    }
+  };
+  </script>
+
+  <script type='text/javascript' src='../../dist/social-byob.min.js'></script>
+</body>
+</html>
