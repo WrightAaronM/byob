@@ -54,7 +54,7 @@ var shareSettings = {
     class: 'share-twitter',
     text: 'This is what gets pre-filled into the tweet',
     url: window.location.href,
-    via: '@YourTwitterUsername'
+    via: 'YourTwitterUsername'    // Do not add the @ sign
   },
   facebook: {
     class: 'share-facebook',
