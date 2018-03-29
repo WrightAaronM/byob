@@ -14,6 +14,7 @@
   <button class='share-linkedin'>Share on LinkedIn</button>
   <button class='share-reddit'>Share on Reddit</button>
   <button class='share-evernote'>Add to Evernote</button>
+  <button class='share-tumblr'>Share on Tumblr</button>
 
   <script>
   var shareSettings = {
@@ -46,10 +47,17 @@
       class: 'share-evernote',
       url: window.location.hostname,
       title: 'Evernote note title'
+    },
+    tumblr: {
+      class: 'share-tumblr',
+      url: window.location.href
     }
   };
   </script>
 
-  <script type='text/javascript' src='../../dist/social-byob.min.js'></script>
+  <script type='text/javascript' src='../../src/social-byob.js'></script> 
+
+  <!-- Or the minified version -->
+  <!-- <script type='text/javascript' src='../../dist/social-byob.min.js'></script> -->
 </body>
 </html>

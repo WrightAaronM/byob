@@ -24,6 +24,10 @@ function shareInit(settings){
   if(settings.hasOwnProperty("reddit")){
     initReddit(settings);
   }
+
+  if(settings.hasOwnProperty("tumblr")){
+    initTumblr(settings);
+  }
 }
 
 function initEvernote(settings){
@@ -40,6 +44,26 @@ function initEvernote(settings){
       window.open(
         "http://www.evernote.com/clip.action?url="+encodeURIComponent(settings.evernote.url)+"&title="+encodeURIComponent(settings.evernote.title),
         "shareOnEvernote",
+        "height=500,width=500"
+      );
+    });
+  }
+}
+
+function initTumblr(settings){
+  var tShares = document.getElementsByClassName(settings.tumblr.class);
+
+  if(!settings.tumblr.hasOwnProperty("url")){
+    console.log(SHARE_DEBUG_TAG+": tumblr must have a url property");
+    return;
+  }
+
+  for(var i=0; i < tShares.length; i++){
+    tShares[i].addEventListener("click", function(e){
+      e.preventDefault();
+      window.open(
+        "https://www.tumblr.com/widgets/share/tool?shareSource=legacy&canonicalUrl="+encodeURIComponent(settings.tumblr.url)+"&posttype=link",
+        "shareOnTumblr",
         "height=500,width=500"
       );
     });
