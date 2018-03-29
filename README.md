@@ -1,5 +1,5 @@
 # Social BYOB (Bring Your Own Buttons)
-A simple JS library to add social sharing events to your own buttons. It currently supports Twitter, Facebook, Google +, LinkedIn, Reddit, and Evernote.
+A simple JS library to add social sharing events to your own buttons. It currently supports Twitter, Facebook, Google +, LinkedIn, Reddit, Evernote, and Tumblr.
 
 **Please note** that this is in early development and may have some breaking changes in the near future.
 
